@@ -4,28 +4,55 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 10f;
-    public Rigidbody2D rigid;
-    public float jumpHeight = 10f;
+    public Animator anim;
 
+    [Header("Movement")]
+    public float moveSpeed = 10f;
     Vector2 movement;
-    bool jump = false;
+
+    [Header("Components")]
+    public Rigidbody2D rigid;
+    public SpriteRenderer sprite;
+
+    public float linearDrag = 4f;
+
+    public bool isGrounded = false;
 
     // Update is called once per frame
     void Update()
     {
-        //Input - getting horizontal and vertical movement and storing it in Vector2 movement
-        movement.x = Input.GetAxisRaw("Horizontal"); //gives value from -1 to 0. Right arrow = 1, left arrow = -1, nothing = 0
+        // Defined on a scale from -1 to +1 (-1 = left, 1 = right and 0 = idle (WASD))
+        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            rigid.velocity = Vector2.up * jumpHeight;
-        }
     }
 
-    void FixedUpdate() //when dealing with physics (Rigidbody2d) used fixed update otherwise use update
+    // When dealing with physics (Rigidbody2d) used fixed update otherwise use update
+    void FixedUpdate()
     {
-        //Movement
-        rigid.MovePosition(rigid.position + movement * moveSpeed * Time.deltaTime);
+        // We only want to move left and right, we use movement.x as the parameter
+        Move(movement.x);
+    }
+
+    void Move(float horizontal)
+    {
+        // Moves the character 
+
+        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            rigid.velocity = new Vector2(moveSpeed, 0);
+            sprite.flipX = false;
+        }
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            rigid.velocity = new Vector2(-moveSpeed, 0);
+            sprite.flipX = true;
+        }
+        else
+        {
+            rigid.velocity = new Vector2(0, 0);
+        }
+
+        // Triggers animation - Mathf.Abs takes value and makes sure value is always positive
+        anim.SetFloat("speed", Mathf.Abs(horizontal));
     }
 }
