@@ -53,6 +53,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Triggers animation - Mathf.Abs takes value and makes sure value is always positive
-        anim.SetFloat("speed", Mathf.Abs(horizontal));
+        anim.SetFloat("Speed", Mathf.Abs(horizontal));
     }
 }
