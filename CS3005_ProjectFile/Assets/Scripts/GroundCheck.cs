@@ -11,12 +11,6 @@ public class GroundCheck : MonoBehaviour
         Player = gameObject.transform.parent.gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.tag == "Ground")

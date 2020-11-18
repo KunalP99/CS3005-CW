@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\HoldJump.cs" />
+    <Compile Include="Assets\Scripts\Blue.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
