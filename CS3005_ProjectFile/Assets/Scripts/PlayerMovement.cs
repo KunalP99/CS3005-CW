@@ -5,17 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Animator anim;
-
-    [Header("Movement")]
-    public float moveSpeed = 10f;
-    public float jumpVelocity;
-    Vector2 movement;
-
-    [Header("Components")]
     public Rigidbody2D rigid;
+    public BoxCollider2D boxCollider;
     public SpriteRenderer sprite;
 
     public bool isGrounded = false;
+    public float moveSpeed = 10f;
+    public float jumpVelocity;
+
+    Vector2 movement;
 
     // Update is called once per frame
     void Update()
@@ -24,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Defined on a scale from -1 to +1 (-1 = left, 1 = right and 0 = idle (WASD))
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        //anim.SetFloat("Horizontal", movement.x);
     }
 
     // When dealing with physics (Rigidbody2d) used fixed update otherwise use update
@@ -40,12 +40,12 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             rigid.velocity = new Vector2(moveSpeed, rigid.velocity.y);
-            sprite.flipX = false;
+            FaceRight();
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             rigid.velocity = new Vector2(-moveSpeed, rigid.velocity.y);
-            sprite.flipX = true;
+            FaceLeft();
         }
 
         // Triggers animation - Mathf.Abs takes value and makes sure value is always positive
@@ -58,5 +58,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rigid.velocity = Vector2.up * jumpVelocity;
         }
+    }
+
+    void FaceLeft()
+    {
+        // Gets the scale from the transform of Knight and changes it so x value changes to -1 
+        transform.localScale = new Vector3(-1, 1, 1);
+    }
+
+    void FaceRight()
+    {
+        transform.localScale = new Vector3(1, 1, 1);
     }
 }
