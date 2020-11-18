@@ -4,7 +4,7 @@
 The player will control a knight whos mechanics at the start of the game include jumping, running and swinging a sword. The player will use these to progress through the levels. To attack, the player will click the RMB (Right mouse button). The attack will have a cooldown so the player cannot spam the move. The movement (WASD) will be very precise and not 'floaty', so once the player stops pressig 'A', then the character will stop moving straight away. Jumping will be done with SPACE, and will be a little 'floaty' but not too much. 
 
 # Enemies 
-* Slime - Regular slime that takes one hit to kill. They move by jumping and once they touch the player, the player is damaged. 
+* Blue - Takes one hit to kill. They move by jumping and once they touch the player, the player is damaged. 
 * Goblins - Harder to kill, 2 - 3 hits and they attack by swinging their club around. 
 * King Boss (Needs work) - Hardest to kill. Boss will move left and right swinging a sword around. The player can't really get close to boss, so they will have to use the new mechanic they acquired through the level to kill it. The boss may do a move that will require the double jump to not get hit for example. 
 
