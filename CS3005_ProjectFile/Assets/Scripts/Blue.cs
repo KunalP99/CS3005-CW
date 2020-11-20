@@ -51,7 +51,7 @@ public class Blue : MonoBehaviour
 
     void StopChase()
     {
-        // Shortcut to right 0, 0 (Stopping movement)
+        // Shortcut to write 0, 0 (Stopping movement)
         rigid.velocity = Vector2.zero;
         anim.SetBool("isFollowing", false);
     }

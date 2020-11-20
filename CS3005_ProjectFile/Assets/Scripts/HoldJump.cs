@@ -5,16 +5,20 @@ using UnityEngine;
 public class HoldJump : MonoBehaviour
 {
     public Rigidbody2D rigid;
-    public float fallMultiplier = 2.5f;
-    public float lowMultiplier = 2f;
+    // How much we are going to multiply gravity when player is falling down
+    public float fallMultiplier = 3f;
+    public float lowMultiplier = 7f;
 
     // Update is called once per frame
     void Update()
     {
+        // If we are falling...
         if (rigid.velocity.y < 0)
         {
+            // Applies fall multiplier to gravity which by default is set to -9.81, we use Vectoer2.up as we are only dealing with vertical movement
             rigid.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
+        // If we are jumping up and not holding down space (tapping space)... 
         else if (rigid.velocity.y > 0 && !Input.GetButton("Jump"))
         {
             rigid.velocity += Vector2.up * Physics2D.gravity.y * (lowMultiplier - 1) * Time.deltaTime;
