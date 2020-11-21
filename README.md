@@ -16,3 +16,5 @@ A knight takes on a contract from the kings right hand man stating that the king
 ## Game rules
 
 ## Description of the digital media elements used within it
+* Images - I created Knight character, blue enemy (plus animations)
+* 
