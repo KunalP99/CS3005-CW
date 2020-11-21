@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Blue : MonoBehaviour
 {
+    public PlayerMovement playerScript;
+
     public Transform player;
     public Rigidbody2D rigid;
     public Animator anim;
@@ -11,9 +13,12 @@ public class Blue : MonoBehaviour
     public float followRange;
     public float moveSpeed;
 
+    public int maxHealth = 100;
+    int currentHealth;
+
      void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     void Update()
@@ -64,6 +69,40 @@ public class Blue : MonoBehaviour
     void FaceRight()
     {
         transform.localScale = new Vector3(-1, 1, 1);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            death();
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            playerScript.kbCounter = playerScript.kbDuration;
+
+            // Checks if the position of player is on the left which will set kbRight to true in the playermovement script
+            if (other.transform.position.x < transform.position.x)
+            {
+                playerScript.kbRight = true;
+            }
+            else
+            {
+                playerScript.kbRight = false;
+            }
+        }
+    }
+    
+    void death()
+    {
+        Destroy(gameObject);
+        //this.enabled = false;
     }
 
 }

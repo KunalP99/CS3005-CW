@@ -33,5 +33,25 @@ public class Health : MonoBehaviour
             }
        
         }
+
+        if (health <= 0)
+        {
+            death();
+        }
     }
+
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            health = health - 1;
+        }
+    }
+
+    void death()
+    {
+        Destroy(gameObject);
+    }
+
 }

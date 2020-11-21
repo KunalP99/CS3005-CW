@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
     public Animator anim;
     public Rigidbody2D rigid;
-    public BoxCollider2D boxCollider;
     public SpriteRenderer sprite;
 
     public bool isGrounded = false;
     public float moveSpeed = 10f;
     public float jumpVelocity;
+
+    public float kb;
+    public float kbDuration;
+    public float kbCounter;
+    public bool kbRight;
 
     Vector2 movement;
 
@@ -29,8 +34,28 @@ public class PlayerMovement : MonoBehaviour
     // When dealing with physics (Rigidbody2d) used fixed update otherwise use update
     void FixedUpdate()
     {
-        // We only want to move left and right, we use movement.x as the parameter
-        Move(movement.x);
+        // Player can only move once knockback is complete
+        if (kbCounter <= 0)
+        {
+            // We only want to move left and right, we use movement.x as the parameter
+            Move(movement.x);
+        } 
+        else
+        {
+            // If enemy is on left then knock back right else knock back left
+            if (kbRight == true)
+            {
+                rigid.velocity = new Vector2(-kb, kb);
+            }
+            if (kbRight == false)
+            {
+                rigid.velocity = new Vector2(kb, kb);
+            }
+
+            // The counter will always need to go downwards for player to always move after knockback finishes
+            kbCounter -= Time.deltaTime;
+        }
+
     }
 
     void Move(float horizontal)
@@ -70,4 +95,6 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.localScale = new Vector3(1, 1, 1);
     }
+
+
 }
