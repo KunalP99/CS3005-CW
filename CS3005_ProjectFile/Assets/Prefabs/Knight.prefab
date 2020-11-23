@@ -123,11 +123,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8741974722813394677}
   rigid: {fileID: 8741974722813394673}
-  boxCollider: {fileID: 0}
   sprite: {fileID: 8741974722813394679}
   isGrounded: 0
   moveSpeed: 10
   jumpVelocity: 7
+  kb: 0
+  kbDuration: 0
+  kbCounter: 0
+  kbRight: 0
 --- !u!114 &8741974722813394683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +159,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8741974722813394677}
+  blue: {fileID: 0}
+  attackPoint: {fileID: 0}
   attackSpeed: 0.9
+  range: 0.5
+  enemies:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2940740187787193964
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -79,7 +79,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
+
+
         if (Input.GetButtonDown("Jump") && isGrounded == true)
+        {
+            rigid.velocity = Vector2.up * jumpVelocity;
+        }
+        else if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             rigid.velocity = Vector2.up * jumpVelocity;
         }
