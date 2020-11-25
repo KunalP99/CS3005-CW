@@ -21,6 +21,7 @@ public class HoldJump : MonoBehaviour
         // If we are jumping up and not holding down space (tapping space)... 
         else if (rigid.velocity.y > 0 && !Input.GetButton("Jump"))
         {
+            // Applies low jump multiplier which gives us the lowest possible jump
             rigid.velocity += Vector2.up * Physics2D.gravity.y * (lowMultiplier - 1) * Time.deltaTime;
         }
     }

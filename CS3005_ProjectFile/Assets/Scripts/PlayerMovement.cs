@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
+            // rigid.velocity.y - sets the position of y to the velocity of rigid so player can move while in the air
             rigid.velocity = new Vector2(moveSpeed, rigid.velocity.y);
             FaceRight();
         }
@@ -79,13 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-
-
         if (Input.GetButtonDown("Jump") && isGrounded == true)
-        {
-            rigid.velocity = Vector2.up * jumpVelocity;
-        }
-        else if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             rigid.velocity = Vector2.up * jumpVelocity;
         }
