@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public GameObject playAgain;
+
     void Update()
     {
         // Make sure player does not have more health than number of heart containers 
@@ -40,7 +42,6 @@ public class Health : MonoBehaviour
         }
     }
 
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -51,7 +52,8 @@ public class Health : MonoBehaviour
 
     void death()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        playAgain.SetActive(true);
     }
 
 }

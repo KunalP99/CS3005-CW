@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement instance;
+    public TriggerBehaviour trigger;
     public Animator anim;
     public Rigidbody2D rigid;
     public SpriteRenderer sprite;
@@ -96,6 +97,4 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.localScale = new Vector3(1, 1, 1);
     }
-
-
 }

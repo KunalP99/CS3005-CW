@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour
+public class DeathTriggerBehaviour : MonoBehaviour
 {
     public Health healthScript;
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             healthScript.health = healthScript.health - 3;
         }
     }
+
 }

@@ -102,7 +102,6 @@ public class Blue : MonoBehaviour
     void death()
     {
         Destroy(gameObject);
-        //this.enabled = false;
     }
 
 }
