@@ -48,6 +48,10 @@ public class Health : MonoBehaviour
         {
             health = health - 1;
         }
+        else if (other.gameObject.tag == "Boss")
+        {
+            health = health - 1;
+        }
     }
 
     void death()

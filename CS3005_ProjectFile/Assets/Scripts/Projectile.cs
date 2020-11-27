@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     public float speed;
 
     GameObject[] enemiesHit;
+    GameObject[] boss;
 
     void Awake()
     {
@@ -24,7 +25,7 @@ public class Projectile : MonoBehaviour
         }
 
         enemiesHit = GameObject.FindGameObjectsWithTag("Enemy");
-
+        boss = GameObject.FindGameObjectsWithTag("Boss");
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -35,6 +36,14 @@ public class Projectile : MonoBehaviour
             {
                 // All Blue objects will take damage of 100 when hit by sword
                 enemies.GetComponent<Blue>().TakeDamage(100);
+                Destroy(gameObject);
+            }
+        }
+        else if (other.gameObject.tag == "Boss")
+        {
+            foreach (GameObject boss in boss)
+            {
+                boss.GetComponent<Boss>().TakeDamage(100);
                 Destroy(gameObject);
             }
         }

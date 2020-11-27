@@ -294,6 +294,10 @@ PrefabInstance:
       propertyPath: blue
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8741974722813394676, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}
+      propertyPath: boss.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 8741974722813394678, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 190.833
@@ -3430,9 +3434,12 @@ GameObject:
   - component: {fileID: 1478063437}
   - component: {fileID: 1478063436}
   - component: {fileID: 1478063435}
-  m_Layer: 0
+  - component: {fileID: 1478063439}
+  - component: {fileID: 1478063438}
+  - component: {fileID: 1478063440}
+  m_Layer: 9
   m_Name: KingMonster
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3521,6 +3528,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1478063438
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478063434}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.5915287}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.25, y: 6.5}
+    newSize: {x: 0.27, y: 0.78}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.25, y: 3.3169427}
+  m_EdgeRadius: 0
+--- !u!114 &1478063439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478063434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dbd5e71485e6240b75c0e46c74cff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 1686439525}
+  maxHealth: 500
+--- !u!50 &1478063440
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478063434}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 30
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &1526658706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8741974724421127205, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}

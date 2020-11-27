@@ -5,7 +5,6 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     public Animator anim;
-    public GameObject blue;
     public Transform attackPoint;
 
     public float attackSpeed;
@@ -33,11 +32,10 @@ public class Combat : MonoBehaviour
         // Creates a cicle and collects all objects that it hits and stores them in enemiesHit array
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, range, enemies);
 
-        foreach(Collider2D enemies in enemiesHit)
+        foreach (Collider2D enemies in enemiesHit)
         {
             // All Blue objects will take damage of 100 when hit by sword
             enemies.GetComponent<Blue>().TakeDamage(100);
-
         }
     }
 

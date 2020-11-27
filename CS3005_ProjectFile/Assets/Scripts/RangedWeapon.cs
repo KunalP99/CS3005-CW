@@ -19,7 +19,7 @@ public class RangedWeapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) && weaponPickedUp == true)
+        if (Input.GetMouseButtonDown(1) /*&& weaponPickedUp == true*/)
         {
             Fire();
         }
