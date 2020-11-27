@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement instance;
-    public TriggerBehaviour trigger;
     public Animator anim;
     public Rigidbody2D rigid;
     public SpriteRenderer sprite;
@@ -18,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public float kbDuration;
     public float kbCounter;
     public bool kbRight;
+
+    [HideInInspector] public bool faceRight = false;
 
     Vector2 movement;
 
@@ -56,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
             // The counter will always need to go downwards for player to always move after knockback finishes
             kbCounter -= Time.deltaTime;
         }
-
     }
 
     void Move(float horizontal)
@@ -89,12 +89,14 @@ public class PlayerMovement : MonoBehaviour
 
     void FaceLeft()
     {
+        faceRight = false;
         // Gets the scale from the transform of Knight and changes it so x value changes to -1 
         transform.localScale = new Vector3(-1, 1, 1);
     }
 
     void FaceRight()
     {
+        faceRight = true;
         transform.localScale = new Vector3(1, 1, 1);
     }
 }

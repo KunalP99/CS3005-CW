@@ -10,7 +10,7 @@ public class DeathTriggerBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            healthScript.health = healthScript.health - 3;
+            healthScript.health = healthScript.health - 4;
         }
     }
 

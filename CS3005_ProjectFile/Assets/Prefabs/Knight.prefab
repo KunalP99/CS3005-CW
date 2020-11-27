@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8741974722813394678}
   - component: {fileID: 8741974722813394679}
   - component: {fileID: 8741974722813394677}
+  - component: {fileID: 8100988425309847608}
   - component: {fileID: 1642071679538414117}
   - component: {fileID: 8741974722813394672}
   - component: {fileID: 8741974722813394683}
@@ -110,6 +111,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8100988425309847608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741974722813394675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14052182f1fabb0438faf3c7f5b804ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8741974722813394672}
+  shotPoint: {fileID: 2865723944129045825, guid: 00724b25f1bb45940885b306fe103cf4, type: 3}
+  bullet: {fileID: 1196945438468542816, guid: 69268d4609f5ae9489e1ece3c7583daa, type: 3}
 --- !u!114 &1642071679538414117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +141,7 @@ MonoBehaviour:
   rigid: {fileID: 8741974722813394673}
   anim: {fileID: 8741974722813394677}
   startFloat: 1
+  floatSpeed: 0
 --- !u!114 &8741974722813394672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a12d0756f625d48b8b42aa558edee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
   anim: {fileID: 8741974722813394677}
   rigid: {fileID: 8741974722813394673}
   sprite: {fileID: 8741974722813394679}
@@ -147,6 +165,7 @@ MonoBehaviour:
   kbDuration: 0
   kbCounter: 0
   kbRight: 0
+  faceRight: 0
 --- !u!114 &8741974722813394683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +218,7 @@ MonoBehaviour:
   heartArray: []
   fullHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
+  playAgain: {fileID: 0}
 --- !u!50 &8741974722813394673
 Rigidbody2D:
   serializedVersion: 4

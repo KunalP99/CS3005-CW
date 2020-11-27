@@ -97,6 +97,11 @@ public class Blue : MonoBehaviour
                 playerScript.kbRight = false;
             }
         }
+
+        if (other.gameObject.tag == "Projectile")
+        {
+            Destroy(this);
+        }
     }
     
     void death()
