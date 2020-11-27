@@ -38667,9 +38667,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1044119283}
   - component: {fileID: 1044119282}
+  - component: {fileID: 1044119284}
   m_Layer: 0
   m_Name: BlueSword
-  m_TagString: Untagged
+  m_TagString: BlueSword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38740,6 +38741,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1044119284
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044119281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.23327601}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5833333, y: 1.1666666}
+    newSize: {x: 0.5833333, y: 1.1666666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5833333, y: 1.6332185}
+  m_EdgeRadius: 0
 --- !u!1001 &1054671861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38831,6 +38858,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1353627472}
+    - target: {fileID: 8100988425309847608, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}
+      propertyPath: blueSword
+      value: 
+      objectReference: {fileID: 1044119281}
+    - target: {fileID: 8100988425309847608, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1353627474}
     - target: {fileID: 8741974722813394672, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}
       propertyPath: kb
       value: 10
@@ -39793,6 +39828,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a12d0756f625d48b8b42aa558edee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1353627474 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8741974722813394677, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}
+  m_PrefabInstance: {fileID: 1054671861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &1353627475 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8741974722813394673, guid: 19584963fe5cec94f9cf42b90095120b, type: 3}

@@ -6,19 +6,16 @@ public class RangedWeapon : MonoBehaviour
 {
 
     public PlayerMovement player;
+    public Animator anim;
 
     public Transform shotPoint;
     public GameObject bullet;
     float rateOfFire = 0.5f;
     float nextFire = 0;
 
-    [HideInInspector] public bool weaponPickedUp = false;
+    public GameObject blueSword;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [HideInInspector] public bool weaponPickedUp = false;
 
     void Update()
     {
@@ -38,13 +35,23 @@ public class RangedWeapon : MonoBehaviour
             if (player.faceRight == true)
             {
                 Instantiate(bullet, shotPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                anim.SetTrigger("Ranged");
             }
             else if (player.faceRight == false)
             {
                 Instantiate(bullet, shotPoint.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                anim.SetTrigger("Ranged");
             }
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "BlueSword")
+        {
+            Destroy(blueSword);
+            weaponPickedUp = true;
+        }
+    }
 
 }
