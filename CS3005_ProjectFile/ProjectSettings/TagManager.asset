@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - BlueSword
   - Boss
+  - RangedTrigger
   layers:
   - Default
   - TransparentFX

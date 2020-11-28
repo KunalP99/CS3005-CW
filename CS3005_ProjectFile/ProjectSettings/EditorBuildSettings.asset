@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 47397abdc0c811a4da2e7ca3d737c0c2
+  - enabled: 1
+    path: Assets/Scenes/Level3_Boss_Intro.unity
+    guid: 40f47a5a32758d04b9d4e2e5dfe98ab4
+  - enabled: 1
+    path: Assets/Scenes/Level3_Boss.unity
+    guid: a995057267facdd4fb7a7507bd616a8f
   m_configObjects: {}

@@ -2145,6 +2145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10753226447896e44b12ebb13c411542, type: 3}
+--- !u!95 &742899685 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1233900629616139872, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+  m_PrefabInstance: {fileID: 8800994089379289981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &790685134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7969944904729574970, guid: ff6f8707f6727d34589e8bf489ba3cc4, type: 3}
@@ -2159,11 +2164,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4650472732478554, guid: 10753226447896e44b12ebb13c411542, type: 3}
   m_PrefabInstance: {fileID: 1743555428}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &864495336 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8800994089894202200, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
-  m_PrefabInstance: {fileID: 8800994089379289981}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &879898514 stripped
 Transform:
@@ -39769,7 +39769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852b432142e664408400921245f42cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 864495336}
+  anim: {fileID: 742899685}
   healthScript: {fileID: 1264118812}
 --- !u!1 &1660705942
 GameObject:
@@ -41145,6 +41145,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 222420126829289272, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800994089491058278, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800994089491058278, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800994089894202201, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000019073
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800994089894202201, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1219.2662
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800994089894202201, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800994089894202201, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1675.4066
+      objectReference: {fileID: 0}
     - target: {fileID: 8800994090210571360, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
       propertyPath: m_Name
       value: LevelLoader

@@ -19,7 +19,7 @@ public class RangedWeapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) /*&& weaponPickedUp == true*/)
+        if (Input.GetMouseButtonDown(1) && weaponPickedUp == true)
         {
             Fire();
         }
@@ -50,6 +50,10 @@ public class RangedWeapon : MonoBehaviour
         if (other.gameObject.tag == "BlueSword")
         {
             Destroy(blueSword);
+            weaponPickedUp = true;
+        }
+        else if (other.gameObject.tag == "RangedTrigger")
+        {
             weaponPickedUp = true;
         }
     }

@@ -59387,7 +59387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852b432142e664408400921245f42cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 2019246711}
+  anim: {fileID: 1618429652}
   healthScript: {fileID: 1588973506}
 --- !u!1 &512728248
 GameObject:
@@ -61431,6 +61431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 222420126829289272, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8800994090210571360, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -88748,6 +88752,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthScript: {fileID: 1588973506}
+--- !u!95 &1618429652 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1233900629616139872, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+  m_PrefabInstance: {fileID: 972590093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1643693380
 GameObject:
   m_ObjectHideFlags: 0
@@ -90240,11 +90249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthScript: {fileID: 1588973506}
---- !u!95 &2019246711 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8800994089894202200, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
-  m_PrefabInstance: {fileID: 972590093}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2030854773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7969944904729574970, guid: ff6f8707f6727d34589e8bf489ba3cc4, type: 3}
