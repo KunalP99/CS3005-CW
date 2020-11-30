@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
     public PlayerMovement playerScript;
+    public Animator anim;
+    public Slider healthBar;
 
     public int maxHealth = 100;
 
@@ -19,7 +22,7 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        healthBar.value = currentHealth;
     }
 
     void FaceLeft()
@@ -62,6 +65,6 @@ public class Boss : MonoBehaviour
 
     void death()
     {
-        Destroy(gameObject);
+        anim.SetTrigger("dead");
     }
 }

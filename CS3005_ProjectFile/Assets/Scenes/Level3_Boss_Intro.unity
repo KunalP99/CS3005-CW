@@ -571,6 +571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 8800994090210571360, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8800994090210571363, guid: 47f0991684464344c9ba5b9ae4544170, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -977,11 +981,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The knight picked up the crown to inspect it.
+  m_text: 'The Knight picked up the crown to inspect it.
 
 
     The ground began to
-    shake and the crown fell out of the knights hand.
+    shake and the crown fell out of the Knights hand.
 
 
     The entrance to the room

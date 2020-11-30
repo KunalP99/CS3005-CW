@@ -14,6 +14,9 @@ public class RangedWeapon : MonoBehaviour
     float nextFire = 0;
 
     public GameObject blueSword;
+    public GameObject tutorialText;
+
+    public AudioSource swordPickedUp;
 
     [HideInInspector] public bool weaponPickedUp = false;
 
@@ -34,6 +37,7 @@ public class RangedWeapon : MonoBehaviour
 
             if (player.faceRight == true)
             {
+                // Spawning a projectile at the shotPoint position with no rotation 
                 Instantiate(bullet, shotPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
                 anim.SetTrigger("Ranged");
             }
@@ -49,6 +53,8 @@ public class RangedWeapon : MonoBehaviour
     {
         if (other.gameObject.tag == "BlueSword")
         {
+            tutorialText.SetActive(true);
+            swordPickedUp.Play();
             Destroy(blueSword);
             weaponPickedUp = true;
         }

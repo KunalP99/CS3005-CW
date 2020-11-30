@@ -6,6 +6,8 @@ public class Combat : MonoBehaviour
 {
     public Animator anim;
     public Transform attackPoint;
+    public AudioSource attackAudio;
+    public AudioSource killAudio;
 
     public float attackSpeed;
     public float range = 0.5f;
@@ -19,6 +21,8 @@ public class Combat : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time > attackCooldown)
         {
+            attackAudio.Play();
+
             Attack();
             // Determines how quick character can attack as at this point in time, attackSpeed is 1 second longer then Time.time and after 1 second Time.time becomes longer
             attackCooldown = Time.time + attackSpeed;
@@ -34,6 +38,7 @@ public class Combat : MonoBehaviour
 
         foreach (Collider2D enemies in enemiesHit)
         {
+            killAudio.Play();
             // All Blue objects will take damage of 100 when hit by sword
             enemies.GetComponent<Blue>().TakeDamage(100);
         }

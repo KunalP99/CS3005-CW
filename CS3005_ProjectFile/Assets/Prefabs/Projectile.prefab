@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 9098743150568960420}
+  spriteRend: {fileID: 8112967552890241125, guid: d7a2b9d3b0878394f9e8bcb1631fb7ad, type: 3}
   speed: 20
 --- !u!114 &1151518643820372940
 MonoBehaviour:
