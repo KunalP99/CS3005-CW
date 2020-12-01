@@ -10,6 +10,7 @@ TagManager:
   - BlueSword
   - Boss
   - RangedTrigger
+  - Music
   layers:
   - Default
   - TransparentFX

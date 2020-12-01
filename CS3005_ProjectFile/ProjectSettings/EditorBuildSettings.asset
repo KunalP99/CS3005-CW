@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2414410cd35f62c42be5986e936dfa31
+  - enabled: 1
     path: Assets/Scenes/Level1_Intro.unity
     guid: eb1b44b945135e343be2d824151d8342
   - enabled: 1
@@ -26,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Epilogue1.unity
     guid: 65fa58958afe11b47accceeac0903cf3
+  - enabled: 1
+    path: Assets/Scenes/Epilogue2.unity
+    guid: ca3d393b21a84784cb110af50cadb093
+  - enabled: 1
+    path: Assets/Scenes/Epilogue3.unity
+    guid: 6efd8679c44519140b5e66d0972e4313
+  - enabled: 1
+    path: Assets/Scenes/Epilogue4.unity
+    guid: cddc1e4628d1669409a76d87bfb80dbf
+  - enabled: 1
+    path: Assets/Scenes/Epilogue5.unity
+    guid: 8847795f0c597624385e2edae1835e6e
   m_configObjects: {}

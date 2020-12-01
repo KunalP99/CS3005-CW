@@ -31,4 +31,9 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
 }

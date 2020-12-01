@@ -17,6 +17,7 @@ public class RangedWeapon : MonoBehaviour
     public GameObject tutorialText;
 
     public AudioSource swordPickedUp;
+    public AudioSource rangedWeaponShot;
 
     [HideInInspector] public bool weaponPickedUp = false;
 
@@ -24,6 +25,7 @@ public class RangedWeapon : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && weaponPickedUp == true)
         {
+            rangedWeaponShot.Play();
             Fire();
         }
     }

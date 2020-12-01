@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Animation Behaviours\IdleBehaviour.cs" />
     <Compile Include="Assets\Scripts\Animation Behaviours\JumpBehaviour.cs" />
     <Compile Include="Assets\Scripts\HoldJump.cs" />
+    <Compile Include="Assets\Scripts\NoDestroy.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
