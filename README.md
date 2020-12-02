@@ -1,7 +1,7 @@
 # CS3005-CW
 
 ## Game description
-The player will control a knight whos mechanics at the start of the game include jumping, running and swinging a sword. The player will use these to progress through the levels. To attack, the player will click the RMB (Right mouse button). The attack will have a cooldown so the player cannot spam the move. The movement (WASD) will be very precise and not 'floaty', so once the player stops pressig 'A', then the character will stop moving straight away. Jumping will be done with SPACE, and will be a little 'floaty' but not too much. 
+A single-player story driven game which allows the player to experience new mechanics during each level. The player will take control of a knight who has to go through these levels that get harder,  These mechanics can help them with the final fight in which they can use the mechanics they learnt to defeat the final boss and finish the game.
 
 # Enemies 
 * Blue - Takes one hit to kill. They move by jumping and once they touch the player, the player is damaged. 
