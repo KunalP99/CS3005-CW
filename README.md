@@ -5,8 +5,7 @@ The player will control a knight whos mechanics at the start of the game include
 
 # Enemies 
 * Blue - Takes one hit to kill. They move by jumping and once they touch the player, the player is damaged. 
-* Goblins - Harder to kill, 2 - 3 hits and they attack by swinging their club around. 
-* King Boss (Needs work) - Hardest to kill. Boss will move left and right swinging a sword around. The player can't really get close to boss, so they will have to use the new mechanic they acquired through the level to kill it. The boss may do a move that will require the double jump to not get hit for example. 
+* King Boss (Needs work) - Hardest to kill. Boss wil jump up and down towards player. He will switch to idle states randomly so player has some breathing room. He cannot be hurt by a normal swing attack, but can be hurt by the new projectile move the player will get in level 3.
 
 ## Game story (Subject to change)
 A Knight takes on a contract from the Kings brother who has asked to find the kidnapped king. Witnesses say he was kidnapped by a green-looking creature. Before the Knight can take on this contract, he must upgrade his equipment. Once he is ready, the Knight enters the cave in which the monster is hiding. They fight, and the Knight is victorious. Right before the Knight was to claim his trophy, the monster shrinks to human size. The Kings brother comes rushing in with 20 of the Kings guards to see that the Knight had his sword to the Kings neck, and he was sentenced to die. The Knight thought about what had happened; the monster was already wounded; the Kings brother knew where the monster was hiding. He was put on the stool by the executioner and the rope was tied around the Knights neck. The Kings brother wanted the King dead in circumstances where he cannot be connected to the crime. Right before he could say anything, the stool was kicked from right under him and the Kings brother lifted his sleeve, to reveal green skin.
