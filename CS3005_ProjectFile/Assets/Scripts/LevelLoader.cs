@@ -21,6 +21,11 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         anim.SetTrigger("Start");

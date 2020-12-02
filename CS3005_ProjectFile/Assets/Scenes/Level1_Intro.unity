@@ -459,11 +459,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "The Knight stumbled across a very interesting contract. \n\nThe King has
-    been kidnapped by a green looking monster.\n\nThe contract says to seek the Kings
-    brother, which is what the Knight did. \n\nUpon entering the castle, the Kings
-    brother sprints towards the Knight and begs for him to go search for the kidnapped
-    King.\n\nThe Knight humbly agrees, and sets off on his adventure.\n\nFirst, the
-    Knight will need to upgrade his equipment, as the journey ahead is perilous...\n"
+    been kidnapped by a green looking creature.\n\nThe contract says to seek the
+    Kings brother, which is what the Knight did. \n\nUpon entering the castle, the
+    Kings brother sprints towards the Knight and begs for him to go search for the
+    kidnapped King.\n\nThe Knight humbly agrees, and sets off on his adventure.\n\nFirst,
+    the Knight will need to upgrade his equipment, as the journey ahead is perilous...\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cdd1b5a5f1c25184388a2e23d5c50be5, type: 2}
   m_sharedMaterial: {fileID: -2464349351061007561, guid: cdd1b5a5f1c25184388a2e23d5c50be5, type: 2}
@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 900}
+  m_ReferenceResolution: {x: 1920, y: 1200}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
